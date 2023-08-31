@@ -1,0 +1,812 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: #F1F3F6;
+}
+
+:root{
+  --primary-color:#2874F0;
+}
+
+.container{
+  padding: 0px 8px;
+}
+
+/* Header CSS */
+
+header{
+  background-color: var(--primary-color);
+  height: 56px;
+}
+header .nav-container{
+  display: flex;
+  align-items: center;
+  height: 56px;
+  width: 1248px;
+  margin: 0px auto;
+}
+
+header .nav-container .logo{
+  display: flex;
+  min-width: 137px;
+  /* justify-content: flex-end; */
+  flex-direction: column;
+  
+}
+
+header .nav-container .logo a{
+  padding-left: 50px;
+}
+header .nav-container .text{
+  font-size: 10px;
+  color: #f0f0f0;
+  letter-spacing: 1px;
+  font-style: italic;
+  font-weight: 400;
+  margin-top: -5px;
+  text-decoration: none;
+}
+header .nav-container span{
+  color: #ffe500;
+  font-weight: 600;
+  margin-right: 2px;
+}
+
+header .nav-container .logo img{
+  width: 75px;
+}
+header .nav-container .logo .icon{
+  width: 10px;
+}
+header .search{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+}
+
+header .search .search-container{
+  width: 555px;
+  height: 36px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 (0 0 0 23%);
+  display: flex;
+}
+
+header .search .search-container input{
+  width: calc(100% - 32px);
+  padding: 16px;
+  border: none;
+  outline: none;
+}
+
+header .search .search-container button{
+  width: 45px;
+  height: 100%;
+  padding: 0px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 0px 2px 2px 0px;
+  cursor: pointer;
+}
+header .search .search-container button .fa{
+  color: var(--primary-color);
+}
+
+header .login{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0px 45px;
+}
+
+header .login button{
+  width: 122px;
+  padding: 5px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-color);
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  position: relative;
+}
+
+.login_menu{
+  position: absolute;
+  top: 56px;
+  height: 350px;
+  width: 240px;
+  background-color: white;
+  box-shadow: -5px 0px 5px rgb(0,0,0,0.1), 5px 0px 5px rgb(0,0,0,0.1);
+  transform: translateX(-28%);
+  display: none;
+  padding-top: 10px;
+  border-radius: 4px;
+}
+
+.login_menu_list::before{
+  position: absolute;
+  content: "";
+  margin-left: 100px;
+  top: -12px;
+  border-top: 0px solid transparent;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid white;
+}
+
+header .login:hover .login_menu{
+  display: block;
+}
+.login_menu_list{
+  height: 100px;
+  max-width: 100%;
+  background-color: white;
+  padding: 5px 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.login_menu_list a{
+  text-decoration: none;
+}
+.login_menu_top{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.menu_nav_link{
+  margin-top: 15px;
+}
+
+
+.menu_nav_link ul li a{
+  text-decoration: none;
+	list-style: none;
+	color: black;
+  font-weight: 400;
+	padding-left: 15px;
+	font-family: 'Teko', sans-serif;
+}
+.menu_nav_link ul li{
+  display: flex;
+  list-style: none;
+  padding: 15px;
+}
+
+.menu_nav_link ul li:hover{
+  background-color: #f5f5f5;
+}
+
+
+header .become-seller{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0px 10px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+header .more{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0px 20px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+
+
+.more_menu{
+  position: absolute;
+  top: 56px;
+  height: 188px;
+  width: 240px;
+  background-color: white;
+  box-shadow: -5px 0px 5px rgb(0,0,0,0.1), 5px 0px 5px rgb(0,0,0,0.1);
+  transform: translateX(-36%);
+  border-radius: 4px;
+  display: none;
+}
+
+.more_menu_list::before{
+  position: absolute;
+  content: "";
+  margin-left: 100px;
+  top: -12px;
+  border-top: 0px solid transparent;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid white;
+}
+
+header .more:hover .more_menu{
+  display: block;
+}
+.more_menu_list{
+  height: 100px;
+  max-width: 100%;
+  background-color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+.more_menu_list a{
+  text-decoration: none;
+}
+
+
+.menu_nav_link{
+  margin-top: 15px;
+}
+
+
+.more_nav_link ul li a{
+  text-decoration: none;
+	list-style: none;
+	color: black;
+  font-weight: 400;
+	padding-left: 15px;
+	font-family: 'Teko', sans-serif;
+}
+.more_nav_link ul li{
+  display: flex;
+  list-style: none;
+  padding: 15px;
+}
+
+.more_nav_link ul li:hover{
+  background-color: #f5f5f5;
+}
+
+header .cart{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0px 20px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+/* Section-1 CSS */
+
+
+.section-1{
+  width: 100%;
+  height: 110px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 /16%);
+}
+
+.section-1-container{
+  width: 1248px;
+  height: 100%;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-1-item{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.section-1-item img{
+  width: 64px;
+  height: 64px;
+}
+
+.section-1-item:hover{
+  color: var(--primary-color);
+}
+
+.section-1-item .text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1px;
+}
+
+/* Section-2 CSS */
+
+.section-2-container{
+  margin: 16px 8px;
+  height: 260px;
+  background-image: url(../images/Slide-1.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Section-3 CSS */
+
+.section-3-container{
+  margin: 10px 8px;
+  height: 122px;
+  background-image: url(../images/Bank-Card-Offer.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Section-4 CSS */
+
+.section-4-container{
+  margin: 8px 8px;
+  height: 362px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-4-offers{
+  width: 230px;
+  height: 100%;
+  background-image: url(../images/Best-Electrotic-image-bg.webp);
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.section-4-offers-viewall{
+  margin-top: 100px;
+  height: 100%;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.section-4-offers-viewall button{
+  margin-top: 24px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.section-4-list{
+  height: 100%;
+  width: calc(100% - 460px);
+  display: flex;
+  overflow-x: auto;
+  
+}
+
+.section-4-item{
+  width: 232;
+  height: 100%;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-4-item img{
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  transition: transform 0.1s;
+}
+.section-4-item:hover img{
+  transform: scale(1.1);
+}
+
+.section-4-item .printer, .projector, .monitor{
+  height: 200px;
+}
+
+.section-4-item-head{
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.section-4-item-price{
+  margin-top: 12px;
+  font-size: 16px;
+  color: #388c3c;
+}
+.section-4-item-explore{
+  opacity: 0.6;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.Ads{
+  width: 230px;
+  height: 100%;
+  background-image: url(../images/Vistara-flights-offer-img.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 4px solid #571d1d;
+}
+
+
+/* Section-5 CSS */
+
+.section-5-container{
+  margin: 8px 8px;
+  height: 362px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-5-offers{
+  width: 230px;
+  height: 100%;
+  background-image: url(../images/Toolkit-equipment-img-bg.webp);
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.section-5-offers-viewall{
+  margin-top: 100px;
+  height: 100%;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.section-5-offers-viewall button{
+  margin-top: 24px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.section-5-list{
+  height: 100%;
+  width: calc(100% - 230px);
+  display: flex;
+  overflow-x: auto;
+}
+.section-5-item{
+  width: 232;
+  height: 100%;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-5-item img{
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  transition: transform 0.1s;
+}
+.section-5-item:hover img{
+  transform: scale(1.1);
+}
+
+.section-5-item .garden , .Measuring-tap{
+  height: 200px;
+  width: 200px;
+}
+.section-5-item  .Measuring-tap{
+  height: 200px;
+  width: 150px;
+}
+
+.section-5-item-head{
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.section-5-item-price{
+  margin-top: 12px;
+  font-size: 16px;
+  color: #388c3c;
+}
+.section-5-item-explore{
+  opacity: 0.6;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+
+/* Section-6 CSS */
+
+.section-6-container{
+  margin: 8px 8px;
+  height: 362px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-6-offers{
+  width: 230px;
+  height: 100%;
+  background-image: url(../images/Best-Electrotic-image-bg.webp);
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.section-6-offers-viewall{
+  margin-top: 100px;
+  height: 100%;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.section-6-offers-viewall button{
+  margin-top: 24px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.section-6-list{
+  height: 100%;
+  width: calc(100% - 230px);
+  display: flex;
+  overflow-x: auto;
+}
+.section-6-item{
+  width: 232;
+  height: 100%;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-6-item img{
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.section-6-item-head{
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.section-6-item-price{
+  margin-top: 12px;
+  font-size: 16px;
+  color: #388c3c;
+}
+.section-6-item-explore{
+  opacity: 0.6;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Section-7 CSS */
+
+.section-7-container{
+  margin: 8px 8px;
+  height: 362px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-7-offers{
+  width: 230px;
+  height: 100%;
+}
+
+.section-7-offers-viewall{
+  margin-top: 100px;
+  height: 100%;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.section-7-offers-viewall button{
+  margin-top: 24px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.section-7-list{
+  height: 100%;
+  width: calc(100% - 230px);
+  display: flex;
+  overflow-x: auto;
+}
+.section-7-item{
+  width: 232;
+  height: 100%;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-7-item img{
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.section-7-item-head{
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.section-7-item-price{
+  margin-top: 12px;
+  font-size: 16px;
+  color: #388c3c;
+}
+.section-7-item-explore{
+  opacity: 0.6;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Section-8 CSS */
+
+.section-8-container{
+  margin: 20px 8px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.section-8-container img{
+  width: 33%;
+}
+
+/* Section-9 CSS */
+
+.section-9-container{
+  margin-top: 10px ;
+  padding: 15px 0px;
+  background-color: #ffffff;
+}
+
+.bottom-discrption{
+  padding: 20px 25px;
+}
+.bottom-discrption h4{
+  color: #878787;
+  font-size: 16px;
+  margin-top: 15px;
+}
+.bottom-discrption p{
+  margin-top: 10px;
+  font-size: 10px;
+  line-height: 16px;
+  color: #787878;
+}
+
+/* Section-9 CSS */
+
+.section-10-container{
+  padding: 35px 0px;
+  background-color: #172337;
+}
+
+.footer{
+  padding: 0px 45px 40px 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer h4{
+  font-size: 12px;
+  color: #878787;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.f-link ul li a{
+  text-decoration: none;
+	list-style: none;
+	color: white;
+	font-size: 12px;
+  font-weight: 400;
+	letter-spacing: 1px;
+  line-height: 21px;
+	font-family: 'Teko', sans-serif;
+}
+.f-link ul li a:hover{
+  text-decoration: underline;
+}
+
+.f-link ul li {
+	list-style: none;
+}
+.f-link p {
+	color: white;
+	font-size: 11px;
+  font-weight: 400;
+	letter-spacing: 1px;
+  line-height: 21px;
+}
+.footer-1{
+  margin-top: 35px;
+  padding: 5px 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-1 .column  a {
+  text-decoration: none;
+	list-style: none;
+	color: white;
+	font-size: 14px;
+  margin: 0 0 0 8px; 
+}
+.copyright-text{
+  color: #ffffff;
+}
